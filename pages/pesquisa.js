@@ -45,7 +45,7 @@ Por isso, estamos sempre abertos a ouvir a sua opinião.</p>
         <label className='font-bold'>Whatsapp:</label>
         <input type='text' className='p-4 block shadow bg-blue-100 my-2 rounded' placeholder='Whatsapp' onChange={onChange} name='Whatsapp' value={form.Whatsapp} />
         <label className='font-bold'>Nota:</label>
-        <div className='flex py-6'>
+        <div className='flex mb-6 mt-2'>
           {notas.map(nota => {
             return (
               <label className='block w-1/6 text-center'>
@@ -56,7 +56,7 @@ Por isso, estamos sempre abertos a ouvir a sua opinião.</p>
           })
           }
         </div>
-        <button className='bg-blue-400 px-12 py-4 font-bold rounded-lg shadow-lg hover:shadow' onClick={save}>Salvar</button>
+        <button className='mb-4 bg-blue-400 px-20 py-4 font-bold rounded-lg shadow-lg hover:shadow' onClick={save}>Salvar</button>
       </div>}
       {sucess && <div className='w-1/5 mx-auto'>
         <p className='mb-6 text-center bg-blue-100 border-t border-b border-blue-500 text-blue-700 px-4 py-3'>Obrigado por contribuir com sua sugestão ou crítica.</p>
