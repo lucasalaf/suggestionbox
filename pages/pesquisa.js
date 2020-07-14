@@ -38,25 +38,25 @@ const Pesquisa = () => {
       <p className='text-center mb-6'>O restaurante X sempre busca por atender melhor seus clientes.<br />
 Por isso, estamos sempre abertos a ouvir a sua opinião.</p>
       {!sucess && <div className='w-1/5 mx-auto'>
-        <label className='font-bold'>Seu nome:</label>
-        <input type='text' className='p-4 block shadow bg-blue-100 my-2 rounded' placeholder='Nome' onChange={onChange} name='Nome' value={form.Nome} />
-        <label className='font-bold'>E-mail:</label>
-        <input type='text' className='p-4 block shadow bg-blue-100 my-2 rounded' placeholder='Email' onChange={onChange} name='Email' value={form.Email} />
-        <label className='font-bold'>Whatsapp:</label>
-        <input type='text' className='p-4 block shadow bg-blue-100 my-2 rounded' placeholder='Whatsapp' onChange={onChange} name='Whatsapp' value={form.Whatsapp} />
-        <label className='font-bold'>Nota:</label>
+        <label className='container font-bold'>Seu nome:</label>
+        <input type='text' className='container p-4 block shadow bg-blue-100 my-2 rounded' placeholder='Nome' onChange={onChange} name='Nome' value={form.Nome} />
+        <label className='container font-bold'>E-mail:</label>
+        <input type='text' className='container p-4 block shadow bg-blue-100 my-2 rounded' placeholder='Email' onChange={onChange} name='Email' value={form.Email} />
+        <label className='container font-bold'>Whatsapp:</label>
+        <input type='text' className='container p-4 block shadow bg-blue-100 my-2 rounded' placeholder='Whatsapp' onChange={onChange} name='Whatsapp' value={form.Whatsapp} />
+        <label className='container font-bold'>Nota:</label>
         <div className='flex mb-6 mt-2'>
           {notas.map(nota => {
             return (
-              <label className='block w-1/6 text-center'>
+              <label className='container block w-1/6 text-center'>
                 {nota}<br />
-                <input type='radio' name='Nota' value={nota} onChange={onChange} />
+                <input className='container' type='radio' name='Nota' value={nota} onChange={onChange} />
               </label>
             )
           })
           }
         </div>
-        <button className='mb-4 bg-blue-400 px-20 py-4 font-bold rounded-lg shadow-lg hover:shadow' onClick={save}>Salvar</button>
+        <button className='container mb-4 bg-blue-400 px-20 py-4 font-bold rounded-lg shadow-lg hover:shadow' onClick={save}>Salvar</button>
       </div>}
       {sucess && <div className='w-1/5 mx-auto'>
         <p className='mb-6 text-center bg-blue-100 border-t border-b border-blue-500 text-blue-700 px-4 py-3'>Obrigado por contribuir com sua sugestão ou crítica.</p>
