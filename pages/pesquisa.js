@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 import PageTitle from '../components/PageTitle'
+import { data } from 'autoprefixer'
+import MaskedInput from 'react-text-mask'
 
 const Pesquisa = () => {
   const [form, setForm] = useState({
@@ -43,7 +45,7 @@ Por isso, estamos sempre abertos a ouvir a sua opinião.</p>
         <label className='container font-bold'>E-mail:</label>
         <input type='text' className='container p-4 block shadow bg-blue-100 my-2 rounded' placeholder='Email' onChange={onChange} name='Email' value={form.Email} />
         <label className='container font-bold'>Whatsapp:</label>
-        <input type='text' className='container p-4 block shadow bg-blue-100 my-2 rounded' placeholder='Whatsapp' onChange={onChange} name='Whatsapp' value={form.Whatsapp} />
+        <MaskedInput mask={['(', /[1-9]/, /\d/, ')', ' ', /\d/, /\d/, /\d/, /\d/, /\d/, '-', /\d/, /\d/, /\d/, /\d/]} type='text' className='container p-4 block shadow bg-blue-100 my-2 rounded' placeholder='(   ) 00000-0000' onChange={onChange} name='Whatsapp' value={form.Whatsapp} />
         <label className='container font-bold'>Nota:</label>
         <div className='flex mb-6 mt-2'>
           {notas.map(nota => {
